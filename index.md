@@ -3,7 +3,8 @@
 **for the first command that uses "-r":**  
 `grep -r "password" ./technical`  
 **the output is:**  
-```./technical/biomed/1471-2105-3-2.txt:            then email an initial password to the user at the
+```
+./technical/biomed/1471-2105-3-2.txt:            then email an initial password to the user at the
 ./technical/biomed/1471-2105-3-2.txt:            pieces of information (username and password) necessary   
 ./technical/biomed/1471-2105-3-2.txt:            user may change the password and update the user
 ./technical/biomed/1471-2350-4-6.txt:          from this study into the password-protected STOP II
@@ -27,14 +28,15 @@
 ./technical/government/Gen_Account_Office/ai9868.txt:of backing up files and protecting passwords;
 ./technical/government/Gen_Account_Office/d01186g.txt:password and user identification based systems, used 
 to
-./technical/plos/pmed.0020206.txt:        has developed a password-protected Web site, PatientWeb (https://fisher.mgh.harvard.edu/), 
-```  
+./technical/plos/pmed.0020206.txt:        has developed a password-protected Web site, PatientWeb (https://fisher.mgh.harvard.edu/),
+```
+
 the command recursively search for the word `password` and is useful for not having to go through different files and directories to search for the one word. 
 
 **the second use of -r goes as:**
 `grep -r "uncanny" ./technical`  
 **the output is:**  
-```./technical/government/Media/Lindsays_legacy.txt:understanding, a maturity of judgment and an uncanny ability to```  
+`./technical/government/Media/Lindsays_legacy.txt:understanding, a maturity of judgment and an uncanny ability to`  
 the command recursively searches for the word uncanny in all files, and is useful for finding a word without looking through every single file and directory. 
 
 
@@ -44,7 +46,8 @@ This command will recursively search for the word "password" in all files under 
 `grep -i "faa:" ./technical/911report/chapter-1.txt`  
 I found this command using ChatGPT.
 **the output is:** 
-```FAA: Hi. Boston Center TMU [Traffic Management Unit], we have a problem here. We have a hijacked aircraft headed towards New York, and we need you guys to, we need someone to scramble some F-16s or something up there, help us out.
+```
+FAA: Hi. Boston Center TMU [Traffic Management Unit], we have a problem here. We have a hijacked aircraft headed towards New York, and we need you guys to, we need someone to scramble some F-16s or something up there, help us out.
     FAA: No, this is not an exercise, not a test.
     FAA: UAL 175 go ahead.
     FAA: Oh, okay. I'll pass that along over here.
@@ -60,13 +63,14 @@ Jersey or somewhere further south.
     FAA: Yes.
     NEADS: When did he land? 'Cause we have got confirmation- FAA: He did not land.
     FAA: Yes. Somewhere up northeast of Camp David.
-    FAA: That's the last report. They don't know exactly where.  
+    FAA: That's the last report. They don't know exactly where.
 ```  
 The command above search for `faa:` in the file `chapter-1.txt` and ignores case sensitivity. This is useful for simply finding the word without a restriction like case sensitivity that could keep you from finding the word. 
 **second use:**  
 `grep -i "AppRopRiate" ./technical/911report/chapter-1.txt`  
 **output:**  
-```there would be time to address the problem through the appropriate FAA and NORAD chains of command; and    
+```
+there would be time to address the problem through the appropriate FAA and NORAD chains of command; and    
     NORAD officials have maintained consistently that had the passengers not caused United 93 to crash, the military would have prevented it from reaching Washington, D.C. That conclusion is based on a version of events that we now know is incorrect. The Langley fighters were not scrambled in response to United 93; NORAD did not have 47 minutes to intercept the flight; NORAD did not even know the plane was hijacked until after it had crashed. It is appropriate, therefore, to reconsider whether United 93 would have been intercepted.
 ```  
 The command us searching for `appropriate` in the file `chapter-1.txt` under the director `./technical/911report`, it is important becuase the file is very big and could be case sensitive so it's easier to search for the word.  
@@ -75,7 +79,8 @@ The command us searching for `appropriate` in the file `chapter-1.txt` under the
 `grep -v "password" ./technical/biomed/rr166.txt`  
 this command search through the file and simply returns every single line that does not contain the word password. I found this using ChatGPT.   
 **output:**  
-``` Introduction
+```
+Introduction
         The concept of lung fibroblasts as effector cells in the
         pathogenesis of idiopathic pulmonary fibrosis (IPF) has
         recently evolved [ 1 2 ] . Lung fibroblasts respond,
