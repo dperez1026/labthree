@@ -40,11 +40,31 @@ the command recursively search for the word `password` and is useful for not hav
 the command recursively searches for the word uncanny in all files, and is useful for finding a word without looking through every single file and directory. 
 
 
-This command will recursively search for the word "password" in all files under the ./technical directory and output the matching lines. I found this use of grep using ChatGPT.  
+This command will recursively search for the word "password" in all files under the ./technical directory and output the matching lines. I found this use of grep using ChatGPT.   
+
+**GPT PROMPT**:  
+`give me four different examples of "-" commands being used under grep commands, and tell me what they mean.`  
+**GPT OUTPUT**:  
+```
+Option 1: -r or --recursive
+This option allows grep to search recursively in all files under a directory. It is useful when searching for a pattern in a large number of files in a directory and its subdirectories.
+```  
+
+
+
 ## option 2  
 **the next command uses -i which searches for words that ignores case sensitivity:**  
 `grep -i "faa:" ./technical/911report/chapter-1.txt`  
-I found this command using ChatGPT.
+I found this command using ChatGPT.  
+**GPT PROMPT**:  
+`give me four different examples of "-" commands being used under grep commands, and tell me what they mean.`  
+**GPT OUTPUT**:  
+```
+Option 2: -i or --ignore-case
+This option makes grep search case-insensitively for the given pattern. It is useful when the pattern can have different cases.
+```  
+
+
 **the output is:** 
 ```
 FAA: Hi. Boston Center TMU [Traffic Management Unit], we have a problem here. We have a hijacked aircraft headed towards New York, and we need you guys to, we need someone to scramble some F-16s or something up there, help us out.
@@ -78,6 +98,14 @@ The command us searching for `appropriate` in the file `chapter-1.txt` under the
 **command:**  
 `grep -v "password" ./technical/biomed/rr166.txt`  
 this command search through the file and simply returns every single line that does not contain the word password. I found this using ChatGPT.   
+**GPT PROMPT**:  
+`give me four different examples of "-" commands being used under grep commands, and tell me what they mean.`  
+**GPT OUTPUT**:  
+```
+Option 3: -v or --invert-match
+This option makes grep output the non-matching lines. It is useful when searching for lines that do not match a pattern.
+```  
+
 **output:**  
 ```
 Introduction
@@ -324,8 +352,19 @@ it's important because you don't have to go in the files manually and ctrl+f you
 **second command:**  
 `grep -c "Alcohol" ./technical/government/Alcohol_Problems/Session4-PDF.txt`  
 The command is useful for searching for acohol in an related file and counting how many times it actually comes up, and since they are related topics it is more even more beneficial, I found bouth uses of the command -c through ChatGPT.  
-**the output:**  
-`31`
+**second output**:  
+`31`  
+
+**GPT PROMPT**:  
+`give me four different examples of "-" commands being used under grep commands, and tell me what they mean.`  
+**GPT OUTPUT**:  
+``` 
+Option 4: -c or --count
+This option makes grep output the number of matching lines instead of the lines themselves. It is useful when counting the number of occurrences of a pattern in a file or set of files.
+```  
+
+
+
 
 
 
